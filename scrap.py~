@@ -1,0 +1,12 @@
+#!/usr/bin/python
+
+def format(string):
+    return '(' + string.upper() + ')'
+
+def main():
+    food = ['spam','spammy','spammer','hammer']
+    dicts = map(format,food)
+    for elem in dicts:
+        print elem
+
+main()

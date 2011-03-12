@@ -1,0 +1,66 @@
+The next incremental improvements for the scrabble decks are:
+
+1) Scrambling front tiles, like:
+
+   A
+   B
+-------
+    A
+  B   C
+-------
+    A
+  B   C
+    D
+-------
+    A   B
+      C
+    D   E   
+-------
+      A
+    B   C
+  D   E   F
+--------
+    A   B
+  C   D   E
+    F   G
+--------
+   A   B   C
+     D   E
+   F   G   H
+
+2) Scrape as many definitions as possible, using en.wiktionary.org, dict.org, and dictionary.com (others?)
+
+3) Work towards two “tilerack” decks:
+    deck 1: 1000 scrabble tileracks to know. Front: 7 tiles, back: words, including
+All possible words
+(Highlighted, or otherwise accented) minimal span of “power plays,” 
+especially uncommon words (DATA??)
+one bingo per rack?
+
+   deck 2: 1000 scrabble moves to know; front: letters and board, back
+All best plays
+
+
+SHIT i just got it!!!
+
+FRONT: an entire scrabble board, loaded with possible and diverse words, and a tilerack
+BACK: Top scoring words, 
+
+Next step:
+
+1) transition to more interesting stuff by making the current main.py into the generation script:
+generate.py: takes input of dictionary lists, board & tile info, and output parameters (per word) of list length, list skip, ordering priorities, definitions, & record formatting.
+2) serialize output and generate flat files (using above code) from current info-- word information:
+
+ID
+WORD
+blank-replacements
+probability
+avg-boardscore
+
+...and then from this generate serialized in-hook, out-hook and anagram id lists (part of generate.py)
+
+*ana-ids
+*in-hook-ids
+*out-hook-ids
+

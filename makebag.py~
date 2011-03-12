@@ -1,0 +1,6 @@
+#!/usr/bin/python
+
+tileinfo = open("tiles.txt","r")
+
+for line in tileinfo.readlines():
+    print list(line.split())
